@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+</head>
+<body>
+    <h2>Robbery Behavior Prediction</h2>
+    {% if prediction %}
+        <p>Prediction: <strong>{{ prediction }}</strong></p>
+        <a href="{% url 'user_dashboard' %}">Back to Dashboard</a>
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Predict</button>
+        </form>
+    {% endif %}
+</body>
+</html>

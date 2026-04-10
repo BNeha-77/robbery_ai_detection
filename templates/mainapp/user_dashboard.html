@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.username }}</h2>
+    <a href="{% url 'climatic_data' %}">Predict Robbery Behavior</a>
+    <br>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

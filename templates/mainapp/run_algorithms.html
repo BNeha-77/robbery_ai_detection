@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run ML Algorithms</title>
+</head>
+<body>
+    <h2>Run ML Algorithms</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button name="algorithm" value="algo1" type="submit">Run Algorithm 1</button>
+        <button name="algorithm" value="algo2" type="submit">Run Algorithm 2</button>
+        <button name="algorithm" value="algo3" type="submit">Run Algorithm 3</button>
+        <button name="algorithm" value="algo4" type="submit">Run Algorithm 4</button>
+    </form>
+    {% if results %}
+        <h3>Results</h3>
+        <pre>{{ results }}</pre>
+    {% endif %}
+</body>
+</html>

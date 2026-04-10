@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preprocess Dataset</title>
+</head>
+<body>
+    <h2>Preprocess Dataset</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Preprocess</button>
+    </form>
+    {% if row_count %}
+        <p>Number of rows after preprocessing: {{ row_count }}</p>
+    {% endif %}
+</body>
+</html>
